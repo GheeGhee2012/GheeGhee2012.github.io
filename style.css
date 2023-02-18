@@ -1,0 +1,14 @@
+#hub{
+  color:blue;
+}
+
+button{
+  background-color:#ff0000;
+  color:#0400ff;
+  font-size:20px;
+  border-radius:5px;
+}
+
+.hidden{
+  display:none;
+}
