@@ -1,15 +1,14 @@
 const passwdinput = document.getElementById("passwdinput");
-const passwdtext = document.getElementById("passwdtext");
 const pass = document.getElementById("pass");
 const web = document.getElementById("web");
 
 function get_pass(){  
   var passwdValue = passwdinput.value;
-  if (passwdValue == "gec-312"){
+  if (passwdValue == "turkey1636?"){
     pass.classList.add("hidden");
     web.classList.remove("hidden");
   }
-  if (passwdValue != "gec-312"){
-    window.setTimeout(window.close, 2000)
+  if (passwdValue != "turkey1636?"){
+    console.log("Incorrect");
   }
 }
