@@ -1,5 +1,14 @@
+body{
+  background-color:#949494;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
 #hub{
   color:blue;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 button{
@@ -7,8 +16,13 @@ button{
   color:#0400ff;
   font-size:20px;
   border-radius:5px;
+  font-weight:bold;
 }
 
 .hidden{
   display:none;
+}
+
+input{
+  border:black 2px solid;
 }
