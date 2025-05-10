@@ -1,5 +1,8 @@
-#title {
+body {
 	text-align: center;
+}
+
+#title {
 	font-size: 45px;
 }
 
@@ -12,8 +15,4 @@ button {
 	font-size: 30px;
 	border-radius: 15px;
 	background-color: skyblue;
-}
-
-#maintext {
-	text-align: center;
 }
