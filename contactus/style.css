@@ -1,14 +1,6 @@
-body {
-	font-family: "Times New Roman", Times, serif;
-}
-
 #title {
 	text-align: center;
 	font-size: 45px;
-}
-
-.brknew {
-	color: red;
 }
 
 p {
@@ -22,6 +14,6 @@ button {
 	background-color: skyblue;
 }
 
-#disclaimer {
-	color: red;
+#maintext {
+	text-align: center;
 }
