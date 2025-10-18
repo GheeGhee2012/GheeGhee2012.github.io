@@ -26,3 +26,7 @@ button {
   background-color: skyblue;
   font-family: "Comic Sans MS", cursive;
 }
+
+#accPage {
+  text-align: center;
+}
