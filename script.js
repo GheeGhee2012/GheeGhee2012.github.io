@@ -23,6 +23,7 @@ if (getCookie("username")) {
 }
 
 function mainAccBtnOnClick() {
+    console.log("Pressed Account button")
     if (createdAccount) {
         if (openedAccDropdown = false) {
             manageAccBtn.classList.remove("hide");
