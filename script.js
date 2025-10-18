@@ -32,7 +32,7 @@ function accOnClick() {
         } else {
             manageAccBtn.classList.add("hide");
             manageAccBtn.innerText = getCookie("username") + " >";
-            openedAccDropdown = true;
+            openedAccDropdown = false;
         }
     } else {
         window.location.href = "https://gheeghee2012.github.io/manageaccount/index.html";
