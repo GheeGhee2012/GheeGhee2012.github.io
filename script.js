@@ -22,7 +22,7 @@ if (getCookie("username")) {
     let createdAccount = false;
 }
 
-function mainAccBtnOnClick() {
+function accOnClick() {
     console.log("Pressed Account button")
     if (createdAccount) {
         if (openedAccDropdown = false) {
