@@ -38,10 +38,14 @@ if (getCookie("username")) {
 function createAccount() {
     const usernameInputBox = document.getElementById("usernameInputBox");
     const passwordInputBox = document.getElementById("passwordInputBox");
+    const errorText = document.getElementById("accWarning");
     if (usernameInputBox.value.length && passwordInputBox.value.length > 5) {
+        errorText.innerText = "";
         setCookie("username", usernameInputBox.value);
         setCookie("password", passwordInputBox.value);
-        window.location.href = "../index.html";
+        window.location.href = "https://gheeghee2012.github.io/index.html";
+    } else {
+      errorText.innerText = "An error has occured: Password or Username is too short.";
     }
     
 }
