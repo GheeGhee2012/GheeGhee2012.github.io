@@ -38,7 +38,7 @@ if (getCookie("username")) {
 function createAccount() {
     const usernameInputBox = document.getElementById("usernameInputBox");
     const passwordInputBox = document.getElementById("passwordInputBox");
-    if (usernameInputBox.length && passwordInputBox.length > 5) {
+    if (usernameInputBox.value.length && passwordInputBox.value.length > 5) {
         setCookie("username", usernameInputBox.value);
         setCookie("password", passwordInputBox.value);
         window.location.href = "../index.html";
