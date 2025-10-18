@@ -53,4 +53,5 @@ function createAccount() {
 function deleteAcc() {
   deleteCookie("username");
   deleteCookie("password");
+  window.location.href = "https://gheeghee2012.github.io/index.html";
 }

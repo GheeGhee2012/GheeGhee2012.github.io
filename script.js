@@ -27,11 +27,11 @@ function accOnClick() {
     if (createdAccount) {
         if (openedAccDropdown == false) {
             manageAccBtn.classList.remove("hide");
-            manageAccBtn.innerText = getCookie("username") + " <";
+            mainAccBtn.innerText = getCookie("username") + " <";
             openedAccDropdown = true;
         } else {
             manageAccBtn.classList.add("hide");
-            manageAccBtn.innerText = getCookie("username") + " >";
+            mainAccBtn.innerText = getCookie("username") + " >";
             openedAccDropdown = false;
         }
     } else {
