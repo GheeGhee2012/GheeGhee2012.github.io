@@ -10,20 +10,18 @@
     <a href="../index.html"><button>Return to main menu</button></a>
     <h1 id="title">Account</h1>
     <div class="hide" id="manageAcc">
-        <button id="ChangePassBtn">Change Password</button>
-        <button id="ChangeUserBtn">Change UserName</button>
         <button id="DeleteUserBtn">Delete Account</button>
-        <input class="hide" type="text" id="changeUsernameInputBox" name="username" placeholder="Enter your new username">
-        <input class="hide" type="text" id="changePasswordInputBox" name="username" placeholder="Enter your new password">
     </div>
     <div class="hide" id="createAcc">
         <p class="warning">Username and Password must be 6 or more letters/symbols/numbers long, no Emojis or special characters</p>
          <input type="text" id="usernameInputBox" name="username" placeholder="Enter your username">
-         <input type="text" id="passwordInputBox" name="username" placeholder="Enter your password">
+         <input type="password" id="passwordInputBox" name="username" placeholder="Enter your password">
          <button onclick="createAccount()">Create Account!</button>
+         <p class="warning">WARNING: You will not be allowed to change your username or password after you have created the account</p>
     </div>
     <p class="warning" id="accWarning"></p>
-    <p class="warning">Notice: Accounts created on GRAVICAL are deleted and expire after one year from creation. So use it when you can!</p>
+    <p class="warning">Notice: Accounts created on GRAVICAL are deleted and expire after one year from creation. These "Accounts" are COOKIE based so you can either erase them by acessing your browser's cookie settings or delete the account via the Manage Account page. These accounts are stored on the local computer using "COOKIES" so they are not stored on GITHUB or GRAVICAL servers. Thank you for you're cooperation. :)</p>
+
     <script src="script.js"></script>
 </body>
 </html>
