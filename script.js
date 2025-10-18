@@ -25,7 +25,7 @@ if (getCookie("username")) {
 function accOnClick() {
     console.log("Pressed Account button")
     if (createdAccount) {
-        if (openedAccDropdown = false) {
+        if (openedAccDropdown == false) {
             manageAccBtn.classList.remove("hide");
             manageAccBtn.innerText = getCookie("username") + " <";
             openedAccDropdown = true;
