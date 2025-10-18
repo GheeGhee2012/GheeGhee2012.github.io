@@ -49,3 +49,8 @@ function createAccount() {
     }
     
 }
+
+function deleteAcc() {
+  deleteCookie("username");
+  deleteCookie("password");
+}
