@@ -16,6 +16,10 @@ body{
   border-radius: 45px;
 }
 
+.hide{
+  display: none;
+}
+
 button {
   font-size: 35px;
   border-radius: 15px;
