@@ -39,7 +39,7 @@ function createAccount() {
     const usernameInputBox = document.getElementById("usernameInputBox");
     const passwordInputBox = document.getElementById("passwordInputBox");
     const errorText = document.getElementById("accWarning");
-    if (usernameInputBox.value.length && passwordInputBox.value.length > 5) {
+    if (usernameInputBox.value.length > 5 && passwordInputBox.value.length > 5) {
         errorText.innerText = "";
         setCookie("username", usernameInputBox.value);
         setCookie("password", passwordInputBox.value);
