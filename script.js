@@ -3,7 +3,7 @@ const websiteNameBox = document.getElementById("websitename");
 
 let websiteName = websiteNameBox.value;
 
-function onclick(){
+function onClick(){
     websiteName = websiteNameBox.value;
     if (websiteName == "gravical"){
         window.location.href = "https://gheeghee2012.github.io/gravical"
