@@ -7,10 +7,23 @@
     <title>GheeGhee Website Terminal</title>
 </head>
 <body>
-    <script src="script.js"></script>
     <h1>GheeGhee Website Terminal</h1>
     <h3>Enter Website name: </h3>
     <input type="text" id="websitename">
     <button id="continue" onclick="onClick()">Continue</button>
+    <script>
+        const continueButton = document.getElementById("continue");
+        const websiteNameBox = document.getElementById("websitename");
+
+        let websiteName = websiteNameBox.value;
+
+        function onClick(){
+            websiteName = websiteNameBox.value;
+            if (websiteName == "gravical"){
+                window.location.href = "https://gheeghee2012.github.io/gravical"
+                console.log("Redirecting to https://gheeghee2012.github.io/gravical");
+            }
+        }
+    </script>
 </body>
 </html>
