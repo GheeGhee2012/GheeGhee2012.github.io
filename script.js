@@ -1,40 +1,12 @@
-const mainAccBtn = document.getElementById("mainAccBtn");
-const manageAccBtn = document.getElementById("manageAccBtn");
+const continueButton = document.getElementById("continue");
+const websiteNameBox = document.getElementById("websitename");
 
-let openedAccDropdown = false;
+let websiteName = websiteNameBox.value;
 
-function getCookie(name) {
-  const cookies = document.cookie.split('; ');
-  for (let c of cookies) {
-    const [key, val] = c.split('=');
-    if (key === name) return val;
-  }
-  return null;
-}
-
-let createdAccount = false;
-
-if (getCookie("username")) {
-    mainAccBtn.innerText = getCookie("username") + " >";
-    createdAccount = true;
-} else {
-    mainAccBtn.innerText = "Create Gravical Account";
-    let createdAccount = false;
-}
-
-function accOnClick() {
-    console.log("Pressed Account button")
-    if (createdAccount) {
-        if (openedAccDropdown == false) {
-            manageAccBtn.classList.remove("hide");
-            mainAccBtn.innerText = getCookie("username") + " <";
-            openedAccDropdown = true;
-        } else {
-            manageAccBtn.classList.add("hide");
-            mainAccBtn.innerText = getCookie("username") + " >";
-            openedAccDropdown = false;
-        }
-    } else {
-        window.location.href = "https://gheeghee2012.github.io/manageaccount/index.html";
+function onclick(){
+    websiteName = websiteNameBox.value;
+    if (websiteName == "gravical"){
+        window.location.href = "https://gheeghee2012.github.io/gravical"
+        console.log("Redirecting to https://gheeghee2012.github.io/gravical");
     }
 }
