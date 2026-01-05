@@ -35,6 +35,6 @@ function accOnClick() {
             openedAccDropdown = false;
         }
     } else {
-        window.location.href = "https://gheeghee2012.github.io/manageaccount/index.html";
+        window.location.href = "manageaccount/index.html";
     }
 }

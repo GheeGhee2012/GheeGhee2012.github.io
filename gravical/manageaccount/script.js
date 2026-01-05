@@ -43,7 +43,7 @@ function createAccount() {
         errorText.innerText = "";
         setCookie("username", usernameInputBox.value);
         setCookie("password", passwordInputBox.value);
-        window.location.href = "https://gheeghee2012.github.io/index.html";
+        window.location.href = "../index.html";
     } else {
       errorText.innerText = "An error has occured: Password or Username is too short.";
     }
@@ -53,5 +53,5 @@ function createAccount() {
 function deleteAcc() {
   deleteCookie("username");
   deleteCookie("password");
-  window.location.href = "https://gheeghee2012.github.io/index.html";
+  window.location.href = "../index.html";
 }
