@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Révision Mathématiques Interactif</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 800px; margin: 20px auto; padding: 20px; background-color: #eef2f7; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 25px; border-top: 5px solid #3498db; }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-style: italic; }
+        h2 { color: #2980b9; font-size: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .question { margin-bottom: 25px; padding: 10px; border-radius: 8px; transition: 0.3s; }
+        .options { list-style: none; padding: 0; }
+        .options li { margin: 12px 0; padding: 8px; border-radius: 5px; border: 1px solid transparent; }
+        
+        /* Classes de couleurs pour la correction */
+        .correct-answer { background-color: #d4edda !important; border: 1px solid #c3e6cb !important; color: #155724; font-weight: bold; }
+        .wrong-selection { background-color: #f8d7da !important; border: 1px solid #f5c6cb !important; color: #721c24; }
+
+        button { background-color: #3498db; color: white; padding: 12px 30px; border: none; border-radius: 25px; cursor: pointer; font-size: 18px; display: block; margin: 30px auto; transition: 0.3s; box-shadow: 0 4px 0 #2980b9; }
+        button:hover { background-color: #2980b9; transform: translateY(-2px); }
+        button:active { transform: translateY(2px); box-shadow: none; }
+        #result { display: none; text-align: center; font-size: 22px; padding: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>📝 Mini-test de révision pour math 8ième année de l'Ontario unité 4</h1>
+    <p class="subtitle">Crée par: Graham West, bonne chance!</p>
+
+    <form id="quizForm">
+        <!-- Algèbre -->
+        <div class="card">
+            <h2>🔢 Algèbre (Fiches RA1 & RA2)</h2>
+            <div class="question" id="q1-container">
+                <p><b>1. Simplifie : 4x + 7 - 2x + 3</b></p>
+                <ul class="options">
+                    <li id="q1-a"><input type="radio" name="q1" value="a"> a) 2x + 10</li>
+                    <li id="q1-b"><input type="radio" name="q1" value="b"> b) 6x + 10</li>
+                    <li id="q1-c"><input type="radio" name="q1" value="c"> c) 2x + 4</li>
+                </ul>
+            </div>
+            <div class="question" id="q2-container">
+                <p><b>2. Évalue 3(x + 5) si x = 2 :</b></p>
+                <ul class="options">
+                    <li id="q2-a"><input type="radio" name="q2" value="a"> a) 11</li>
+                    <li id="q2-b"><input type="radio" name="q2" value="b"> b) 21</li>
+                    <li id="q2-c"><input type="radio" name="q2" value="c"> c) 15</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Géométrie -->
+        <div class="card">
+            <h2>📐 Transformations (Fiche RA4 - Géo)</h2>
+            <div class="question" id="q4-container">
+                <p><b>3. Rotation 90° horaire du point A(-2, 4) :</b></p>
+                <ul class="options">
+                    <li id="q4-a"><input type="radio" name="q4" value="a"> a) A'(4, 2)</li>
+                    <li id="q4-b"><input type="radio" name="q4" value="b"> b) A'(-4, -2)</li>
+                    <li id="q4-c"><input type="radio" name="q4" value="c"> c) A'(2, -4)</li>
+                </ul>
+            </div>
+            <div class="question" id="q7-container">
+                <p><b>4. Une homothétie de rapport k = 2 du point (4, 2) donne :</b></p>
+                <ul class="options">
+                    <li id="q7-a"><input type="radio" name="q7" value="a"> a) (2, 1)</li>
+                    <li id="q7-b"><input type="radio" name="q7" value="b"> b) (6, 4)</li>
+                    <li id="q7-c"><input type="radio" name="q7" value="c"> c) (8, 4)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Diagrammes -->
+        <div class="card">
+            <h2>📊 Diagrammes (Fiche RA4 - Stat)</h2>
+            <div class="question" id="q5-container">
+                <p><b>5. Axe horizontal : 1 case = 50g. Pour 300g, il faut :</b></p>
+                <ul class="options">
+                    <li id="q5-a"><input type="radio" name="q5" value="a"> a) 4 cases</li>
+                    <li id="q5-b"><input type="radio" name="q5" value="b"> b) 6 cases</li>
+                    <li id="q5-c"><input type="radio" name="q5" value="c"> c) 3 cases</li>
+                </ul>
+            </div>
+            <div class="question" id="q6-container">
+                <p><b>6. Une donnée aberrante est une donnée qui :</b></p>
+                <ul class="options">
+                    <li id="q6-a"><input type="radio" name="q6" value="a"> a) est la plus petite du tableau</li>
+                    <li id="q6-b"><input type="radio" name="q6" value="b"> b) est égale à zéro</li>
+                    <li id="q6-c"><input type="radio" name="q6" value="c"> c) s'écarte de la tendance visuelle</li>
+                </ul>
+            </div>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Soumettre et Voir la Correction</button>
+    </form>
+
+    <div id="result" class="card"></div>
+
+    <script>
+        function checkAnswers() {
+            // Définition des bonnes réponses
+            const correctAnswers = { q1: "a", q2: "b", q4: "a", q7: "c", q5: "b", q6: "c" };
+            let score = 0;
+            const total = Object.keys(correctAnswers).length;
+            
+            // Réinitialiser les styles
+            const allItems = document.querySelectorAll('.options li');
+            allItems.forEach(li => li.className = '');
+
+            // Vérification
+            for (let q in correctAnswers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                const correctVal = correctAnswers[q];
+                
+                // Colorer la bonne réponse en vert quoi qu'il arrive
+                document.getElementById(`${q}-${correctVal}`).classList.add('correct-answer');
+
+                if (selected) {
+                    if (selected.value === correctVal) {
+                        score++;
+                    } else {
+                        // Colorer la mauvaise réponse choisie en rouge
+                        document.getElementById(`${q}-${selected.value}`).classList.add('wrong-selection');
+                    }
+                }
+            }
+
+            // Affichage du résultat final
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            let message = score === total ? "Parfait ! 🏆" : (score >= total/2 ? "Pas mal ! Relis tes erreurs. 👍" : "Besoin de plus de révision ! 💪");
+            resultDiv.innerHTML = `Résultat : ${score} / ${total}<br><small>${message}</small>`;
+            resultDiv.style.backgroundColor = score >= total/2 ? "#d4edda" : "#f8d7da";
+            
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
